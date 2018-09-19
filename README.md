@@ -19,6 +19,13 @@ The above command should set your context to AKS. Run this next:
 
 3. `kubectl apply -f .\aksdeploy.yaml`
 
+The above command pulls from my docker hub. If you wish to use yours, then
+- tag your local image
+- push to docker
+- edit the Image in aksdeploy.yaml 
+
+If you want this image to be pulled locally use: `docker pull nishanil/helloworld`
+
 4. Run this to ensure the Public IP is set: `kubectl get service helloworld --watch`
 
 The above command may take a little while to set the public ip.
